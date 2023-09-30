@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Panier acticle HTML5 + JavaScript</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" >     
+    </head>
+    <body>
+        <section  class="container">
+            <article class="well form-inline pull-left col-lg-8">
+                <legend>Gestion de la selection et la reation d'article</legend>
+                <label class="col-lg-3">Identifiant</label> : <input type = "number" id = "id" style="width:120px" class="input-sm form-control"></input><br><br>
+                <label class="col-lg-3">Nom article</label> : <input type = "text" id = "nom" style="width:120px" class="input-sm form-control"></input><br><br>
+                <label class="col-lg-3" >Quantité</label> : <input type = "number" id = "qte" style="width:120px" class="input-sm form-control"></input><br><br> 
+                <label class="col-lg-3">Prix</label> : <input type = "number" id = "prix" style="width:120px" class="input-sm form-control"></input><br><br>
+                <button class="btn btn-primary" type="submit" onclick="ajouter()"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
+                <div id="simple" class = "coeur-carre brut clicable"><span onClick="blanc_simple()"></span>
+                    <div class = "coeur-cercle brut"></div>
+                    <div class = "coeur-cercle brut"></div>
+                </div>
+            </article>
+        </section>
+        
+        <section class="container">
+            <article class="well form-inline pull-left col-lg-8">
+                <legend>Article du panier</legend>
+                <table id="tableau" class="table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Nom article</th>
+                            <th>Qte</th>
+                            <th>Prix unitaire</th>
+                            <th>Prix de la ligne</th>
+                            <th>Supprimer</th>
+                        </tr>
+                    </thead>
+                </table>
+                <br><label>Prix Total des articles du panier total</label> : <label id = "prixTotal"></label>
+                <label id = "nbreLignes" hidden>0</label>
+            </article>
+        </section>
+        <script src="liste.js"></script> 
+    </body>
+    <footer class="container fixed-bottom bg-dark text-light">
+        <div class ="text-center py-3">createur Alfred A fall copyright 2023
+            <a href="" class=""></a>
+        </div>
+    </footer>
+</html>
